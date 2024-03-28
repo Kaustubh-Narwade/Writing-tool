@@ -181,7 +181,8 @@ function App() {
               </div>
               {block.type === "text" ? (
                 <TextArea
-                  rows={6}
+                  rows={8}
+                  cols={48}
                   value={block.content}
                   onChange={(e) => {
                     // text blocks are not editable, this is just for display
@@ -193,11 +194,13 @@ function App() {
                   }}
                 />
               ) : (
-                <img
-                  src={URL.createObjectURL(block.content)}
-                  alt="uploaded"
-                  className="image-block"
-                />
+                <div className="image">
+                  <img
+                    src={URL.createObjectURL(block.content)}
+                    alt="uploaded"
+                    className="image-block"
+                  />
+                </div>
               )}
             </div>
           ))}
@@ -209,7 +212,7 @@ function App() {
           onCancel={handleModalCancel}
           okText={editIndex !== null ? "Save" : "Add"}
         >
-          <div>
+          <div className="select-block">
             <Button
               type={blockType === "text" ? "primary" : ""}
               onClick={() => setBlockType("text")}
@@ -231,6 +234,7 @@ function App() {
             />
           ) : (
             <Upload
+            className="img-upload-btn"
               accept="image/*"
               showUploadList={false}
               customRequest={({ onSuccess, onError, file }) => {

@@ -24,3 +24,47 @@ body {
   padding: 16px;
 }
 
+.editor-tools {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.blocks-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.block {
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.block-edit-options {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+
+.image-block {
+  width: 190px;
+  border-radius: 5px;
+}
+
+.select-block{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.img-upload-btn{
+  display: flex;
+  justify-content: center;
+}
