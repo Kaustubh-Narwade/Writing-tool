@@ -119,7 +119,7 @@ function App() {
     <div className="container">
       <div className="nav">
         <header className="App-header">
-          <h1>Web-Based Writing Tool</h1>
+          <h1>Writing Tool</h1>
           <div className="editor-tools">
             <Tooltip title="Bold">
               <Button
